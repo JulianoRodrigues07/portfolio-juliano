@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" type="image/png" href="assets/imgs/logo-jr.png">
   
 </head>
 <body>
@@ -20,6 +21,7 @@
     <ul class="nav-links">
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#experiencia">Experiência</a></li>
+      <li><a href="#projetos">Projetos</a></li>
       <li><a href="#educacao">Educação</a></li>
       <li><a href="#skills">Skills</a></li>
     </ul>
@@ -30,6 +32,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#sobre">Sobre</a>
     <a href="#experiencia">Experiência</a>
+    <a href="#projetos">Projetos</a>
     <a href="#educacao">Educação</a>
     <a href="#skills">Skills</a>
     <a href="#contato">Contato</a>
@@ -129,10 +132,78 @@
     </div>
   </section>
 
+  <!-- PROJECTS -->
+  <section id="projetos">
+    <div class="section-label reveal">Portfólio</div>
+    <h2 class="section-title reveal">Projetos em <em>destaque</em></h2>
+
+    <div class="project-featured reveal">
+      <div class="project-featured-media">
+        <div class="project-browser">
+          <div class="project-browser-bar">
+            <span class="bdot bdot-r"></span><span class="bdot bdot-y"></span><span class="bdot bdot-g"></span>
+            <div class="project-browser-url"><i class="bi bi-lock-fill"></i> vidadepetspf.com.br</div>
+          </div>
+          <div class="project-browser-body">
+            <img src="assets/imgs/vidadepets-preview.png" alt="Preview do site Vida de Pets" onerror="this.remove(); this.closest('.project-browser-body').classList.add('no-img')">
+            <div class="project-browser-fallback">
+              <i class="bi bi-heart-fill"></i>
+              <span>Vida de Pets</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-featured-info">
+        <div class="project-status"><span class="dot"></span> Em produção</div>
+        <h3>Vida de Pets</h3>
+        <p class="project-tagline">Plataforma full-stack para um petshop real em Passo Fundo/RS — do agendamento de banho e tosa ao painel administrativo, construída do zero, do banco de dados ao deploy.</p>
+
+        <div class="project-stack">
+          <span>Next.js 15</span><span>TypeScript</span><span>Tailwind CSS v4</span><span>Prisma</span><span>PostgreSQL</span><span>Framer Motion</span><span>Vercel</span>
+        </div>
+
+        <ul class="project-features">
+          <li><i class="bi bi-calendar2-check-fill"></i> Agendamento em tempo real, com bloqueio automático de horários já ocupados</li>
+          <li><i class="bi bi-shield-lock-fill"></i> Painel administrativo protegido por autenticação própria via cookies httpOnly</li>
+          <li><i class="bi bi-whatsapp"></i> Integração com WhatsApp para contato direto com o cliente</li>
+          <li><i class="bi bi-layout-text-window-reverse"></i> Páginas de Serviços, Creche &amp; Hotel, Sobre, Agendamento e Contato</li>
+        </ul>
+
+        <div class="project-links">
+          <a href="https://vidadepetspf.com.br" target="_blank" class="btn-primary btn-sm">Acessar site <i class="bi bi-box-arrow-up-right"></i></a>
+          <a href="https://github.com/JulianoRodrigues07/vida-de-pets" target="_blank" class="btn-ghost btn-sm">Ver código <i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card reveal">
+        <div class="project-card-icon"><i class="bi bi-patch-check-fill"></i></div>
+        <h4>Gerador de Certificados</h4>
+        <p>Aplicação em Angular para criação de certificados: componentização, roteamento, injeção de dependência e formulários reativos com Angular Forms.</p>
+        <div class="project-stack project-stack-sm">
+          <span>Angular</span><span>Bootstrap</span><span>uuid</span>
+        </div>
+        <a href="https://projetodegeradordecertificado.netlify.app" target="_blank" class="edu-cta">Ver projeto <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-icon"><i class="bi bi-person-badge-fill"></i></div>
+        <h4>Este Portfólio</h4>
+        <p>O site que você está vendo agora: interface dark com starfield animado em canvas, scroll reveal e navegação responsiva, escrito em HTML, CSS e JavaScript puros.</p>
+        <div class="project-stack project-stack-sm">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+        </div>
+        <a href="https://github.com/JulianoRodrigues07" target="_blank" class="edu-cta">Ver código <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
   <!-- EDUCATION -->
   <section id="educacao">
     <div class="section-label reveal">Formação</div>
-    <h2 class="section-title reveal">Certificações &amp; <em>Projetos</em></h2>
+    <h2 class="section-title reveal">Certificações &amp; <em>Cursos</em></h2>
     <div class="edu-grid">
       <div class="edu-card reveal">
         <div class="edu-card-top">
@@ -140,15 +211,6 @@
           <div class="edu-meta"><h3>Atitus Educação</h3><span>Agosto 2021 — Julho 2025</span></div>
         </div>
         <p class="edu-desc">Bacharelado em <strong>Ciências da Computação</strong> — formação ampla em algoritmos, estruturas de dados, sistemas, redes e desenvolvimento de software.</p>
-      </div>
-      <div class="edu-card reveal">
-        <div class="edu-card-top">
-          <div class="edu-logo"><img src="assets/imgs/vidadepet.png" alt="Rocketseat" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-placeholder>RS</span>'"></div>
-          <div class="edu-meta"><h3>Projeto Real</h3><span>Vida de Pets - Passo Fundo</span></div>
-        </div>
-        <p class="edu-desc">Site completo desenvolvido para o petshop Vida de Pets.</p>
-        <a href="https://vida-de-pets.vercel.app" target="_blank" class="edu-cta">Acessar Site <i class="bi bi-arrow-right"></i></a>
-        <a href="https://github.com/JulianoRodrigues07/vida-de-pets" target="_blank" class="edu-cta">GitHub do Projeto <i class="bi bi-arrow-right"></i></a>
       </div>
       <div class="edu-card reveal">
         <div class="edu-card-top">
@@ -221,12 +283,6 @@
           CSS3
         </div>
 
-        <!-- GitHub (imagem) -->
-        <div class="skill-pill reveal">
-          <img src="assets/imgs/github.png" alt="GitHub" style="width:40px;height:40px;object-fit:contain;" />
-          GitHub
-        </div>
-
         <!-- JavaScript -->
         <div class="skill-pill reveal">
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -236,6 +292,12 @@
           JavaScript
         </div>
 
+        <!-- GitHub (imagem) -->
+        <div class="skill-pill reveal">
+          <img src="assets/imgs/github.png" alt="GitHub" style="width:40px;height:40px;object-fit:contain;" />
+          GitHub
+        </div>
+        
         <!-- Python -->
         <div class="skill-pill reveal">
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -284,6 +346,50 @@
             <path d="M29.5 14.8L17.2 2.5a1.7 1.7 0 00-2.4 0L12.3 5l3 3a2 2 0 012.5 2.6l2.9 2.9a2 2 0 012.6 2.5 2 2 0 01-2 2 2 2 0 01-2-2c0-.2 0-.4.1-.6L17 12.9v7.4a2 2 0 011.2 1.8 2 2 0 01-2 2 2 2 0 01-2-2 2 2 0 011.3-1.9v-7.5a2 2 0 01-1.1-2.6L11.6 8.2l-9.1 9.1a1.7 1.7 0 000 2.4l12.3 12.3a1.7 1.7 0 002.4 0l12.3-12.3a1.7 1.7 0 000-2.9z" fill="#f05032"/>
           </svg>
           Git
+        </div>
+
+        <!-- TypeScript -->
+        <div class="skill-pill reveal">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="3" fill="#3178c6"/>
+            <text x="16" y="21.5" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#fff" text-anchor="middle">TS</text>
+          </svg>
+          TypeScript
+        </div>
+
+        <!-- Tailwind CSS -->
+        <div class="skill-pill reveal">
+          <svg viewBox="0 0 54 33" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#38bdf8" d="M27,0 C19.8,0 15.3,3.6 13.5,10.8 C16.2,7.2 19.35,5.85 23,6.75 C25.0895,7.27375 26.5908,8.7930625 28.25,10.475 C30.9598,13.2151875 34.0898,16.375 40.5,16.375 C47.7,16.375 52.2,12.775 54,5.575 C51.3,9.175 48.15,10.525 44.5,9.625 C42.4105,9.10125 40.9092,7.58187 39.25,5.9 C36.5402,3.16 33.4102,0 27,0 Z M13.5,16.375 C6.3,16.375 1.8,19.975 0,27.175 C2.7,23.575 5.85,22.225 9.5,23.125 C11.5895,23.65 13.0908,25.1706875 14.75,26.85 C17.4598,29.5910625 20.5898,32.75 27,32.75 C34.2,32.75 38.7,29.15 40.5,21.95 C37.8,25.55 34.65,26.9 31,26 C28.9105,25.475 27.4092,23.955 25.75,22.275 C23.0402,19.535 19.9102,16.375 13.5,16.375 Z"/>
+          </svg>
+          Tailwind CSS
+        </div>
+
+        <!-- Prisma -->
+        <div class="skill-pill reveal">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="3" fill="#1B222D"/>
+            <path d="M15.3 5.4a1 1 0 011.5-.1l9.6 9.2a1 1 0 010 1.44l-9.6 9.2a1 1 0 01-1.5-.12l-.3-.42a1 1 0 01.13-1.28L22.7 16 14.5 8.1a1 1 0 01.5-1.7z" fill="#0C8CE9"/>
+          </svg>
+          Prisma
+        </div>
+
+        <!-- PostgreSQL -->
+        <div class="skill-pill reveal">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="3" fill="#336791"/>
+            <text x="16" y="21" font-family="Arial, sans-serif" font-weight="700" font-size="11.5" fill="#fff" text-anchor="middle">PG</text>
+          </svg>
+          PostgreSQL
+        </div>
+
+        <!-- Vercel -->
+        <div class="skill-pill reveal">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="3" fill="#000"/>
+            <polygon points="16,7 26,25 6,25" fill="#fff"/>
+          </svg>
+          Vercel
         </div>
       </div>
     </div>
