@@ -152,3 +152,20 @@ window.addEventListener('scroll', () => {
   init();
   animate();
 })();
+function copiarEmail(btn) {
+  const email = "julianorr20@gmail.com";
+  navigator.clipboard.writeText(email).then(() => {
+    const icon = btn.querySelector("i");
+    icon.classList.remove("bi-clipboard");
+    icon.classList.add("bi-clipboard-check-fill");
+    btn.classList.add("copied");
+
+    setTimeout(() => {
+      icon.classList.remove("bi-clipboard-check-fill");
+      icon.classList.add("bi-clipboard");
+      btn.classList.remove("copied");
+    }, 2000);
+  }).catch(() => {
+    alert("Não foi possível copiar o email. Copie manualmente: " + email);
+  });
+}

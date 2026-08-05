@@ -419,3 +419,24 @@ footer {
   .skills-grid { grid-template-columns: repeat(3, 1fr); }
   footer { flex-direction: column; text-align: center; }
 }
+.contact-email-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+}
+.copy-email-btn {
+  background: transparent;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: var(--accent);
+  border-radius: 9px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  cursor: pointer;
+  font-family: var(--font-head);
+}
+
+.copy-email-btn.copied {
+  color: var(--accent);
+  border-color: rgba(56, 189, 248, 0.3);
+  background: rgba(56, 189, 248, 0.07);
+}
