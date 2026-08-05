@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" type="image/png" href="assets/imgs/logo-jr.png">
-  
 </head>
 <body>
   <div class="orb orb-1"></div>
@@ -144,8 +143,20 @@
             <span class="bdot bdot-r"></span><span class="bdot bdot-y"></span><span class="bdot bdot-g"></span>
             <div class="project-browser-url"><i class="bi bi-lock-fill"></i> vidadepetspf.com.br</div>
           </div>
-          <div class="project-browser-body">
-            <img src="assets/imgs/vidadepets-preview.png" alt="Preview do site Vida de Pets" onerror="this.remove(); this.closest('.project-browser-body').classList.add('no-img')">
+          <div class="project-browser-body" id="projectPreview">
+            <video
+              id="projectPreviewVideo"
+              class="project-preview-video"
+              poster="assets/imgs/vidadepets-preview.jpg"
+              muted loop playsinline preload="metadata"
+              onerror="this.closest('.project-browser-body').classList.add('no-img')">
+              <source src="assets/videos/vidadepets-preview.mp4" type="video/mp4">
+              <source src="assets/videos/vidadepets-preview.webm" type="video/webm">
+            </video>
+            <div class="project-play-badge">
+              <i class="bi bi-play-fill "></i>
+              <span>Passe o mouse para ver</span>
+            </div>
             <div class="project-browser-fallback">
               <i class="bi bi-heart-fill"></i>
               <span>Vida de Pets</span>
@@ -183,7 +194,7 @@
         <h4>Gerador de Certificados</h4>
         <p>Aplicação em Angular para criação de certificados: componentização, roteamento, injeção de dependência e formulários reativos com Angular Forms.</p>
         <div class="project-stack project-stack-sm">
-          <span>Angular</span><span>Bootstrap</span>
+          <span>Angular</span><span>Bootstrap</span><span>uuid</span>
         </div>
         <a href="https://projetodegeradordecertificado.netlify.app" target="_blank" class="edu-cta">Ver projeto <i class="bi bi-arrow-right"></i></a>
       </div>
@@ -200,7 +211,7 @@
     </div>
   </section>
 
-  <!-- EDUCATION -->
+<!-- EDUCATION -->
   <section id="educacao">
     <div class="section-label reveal">Formação</div>
     <h2 class="section-title reveal">Certificações &amp; <em>Cursos</em></h2>

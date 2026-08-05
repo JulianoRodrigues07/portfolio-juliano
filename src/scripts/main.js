@@ -47,6 +47,22 @@ window.addEventListener('scroll', () => {
   nav.style.background = window.scrollY > 20 ? 'rgba(7,9,15,0.95)' : 'rgba(7,9,15,0.7)';
 });
 
+// ── Project preview: play video on hover / tap
+(function() {
+  const wrapper = document.querySelector('.project-browser');
+  const video = document.getElementById('projectPreviewVideo');
+  if (!wrapper || !video) return;
+
+  const play = () => video.play().catch(() => {});
+  const pause = () => { video.pause(); video.currentTime = 0; };
+
+  wrapper.addEventListener('mouseenter', play);
+  wrapper.addEventListener('mouseleave', pause);
+  wrapper.addEventListener('touchstart', () => {
+    video.paused ? play() : pause();
+  }, { passive: true });
+})();
+
 // ── STARFIELD
 (function() {
   const canvas = document.getElementById('particles-canvas');
